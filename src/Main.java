@@ -7,15 +7,15 @@ Classes
 
 Three classes and one interface are necessary to complete this homework:
 
-    These classes will be named: Character, Warrior and Wizard.
-    This interface will be called Attacker.
+    These classes will be named: Character, Warrior and Wizard. - DONE
+    This interface will be called Attacker. - DONE
 
 
 Attacker interface
 
 This interface will have:
 
-    A public void function attack() that takes a character as a parameter.
+    A public void function attack() that takes a character as a parameter. - DONE
 
 We have two types of characters, warriors and wizards, who have different attributes and combat styles. You need to create a character class (that can’t be instantiated) that will contain base attributes that are common for both - warriors and wizards.
 
@@ -23,13 +23,13 @@ Character class
 
 This class will have:
 
-    Variable called id of data type string, auto-generated (Private member)
-    Variable called name of data type string (Private member)
-    Variable called hp of data type int, random between 100-200 to warriors and 50-100 for wizards, representing the health points (Private member)
-    Variable called isAlive of data type boolean defaulted to true (Private member)
-    A “parameterized” constructor that takes name and hp (as parameters)
-    Public Getter functions to access these variables
-    Public Setter functions to change these variables
+    Variable called id of data type string - DONE, auto-generated - NOT DONE (Private member)
+    Variable called name of data type string (Private member) - DONE
+    Variable called hp of data type int - DONE, random between 100-200 to warriors and 50-100 for wizards, representing the health points (Private member) - NOT DONE
+    Variable called isAlive of data type boolean defaulted to true (Private member) - DONE
+    A “parameterized” constructor that takes name and hp (as parameters) - DONE
+    Public Getter functions to access these variables - DONE
+    Public Setter functions to change these variables - DONE
 
 
 Warrior Class
