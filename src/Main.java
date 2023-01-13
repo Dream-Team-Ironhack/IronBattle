@@ -6,6 +6,9 @@ public class Main {
         System.out.println(newWarrior.getId());
         Warrior newNewWarrior = new Warrior("Jaume2", 3, 3, 10);
         System.out.println(newNewWarrior.getId());
+        Wizard wizard = new Wizard("Jaume3", 5, 6, 100);
+        System.out.println(wizard.getId());
+
         /* Instructions
 
 Let’s walk through the details of the homework:
@@ -32,6 +35,7 @@ This class will have:
     Variable called id of data type string - DONE,
 
     auto-generated - DONE (Private member)
+    Crear una id String en funcion de si es wizard o warrior, WI_1, WA_2 - NOT DONE
 
     Variable called name of data type string (Private member) - DONE
     Variable called hp of data type int - DONE,
