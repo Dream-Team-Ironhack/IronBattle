@@ -17,10 +17,14 @@ public class Main {
         System.out.println(newWarrior.getStrength());
         Warrior newNewWarrior = new Warrior("Jaume2");
         System.out.println(newNewWarrior.getId());
-        Wizard wizard = new Wizard("Jaume3",  6,100);
+        Wizard wizard = new Wizard("Jaume3");
         System.out.println(wizard.getHp());
-        Wizard wizard2 = new Wizard("Jaume4",  6, 100);
+        System.out.println("mana"+wizard.getMana());
+        System.out.println("int"+wizard.getIntelligence());
+        Wizard wizard2 = new Wizard("Jaume4");
         System.out.println(wizard2.getHp());
+        System.out.println("mana"+wizard2.getMana());
+        System.out.println("int"+wizard2.getIntelligence());
 
 
         /* Instructions
@@ -69,7 +73,7 @@ This class is derived from the Character class. A Warrior is a Character that fi
 The Warrior class will have:
 
     Variable called stamina of data type int, random between 10-50, representing a resource the warrior consumes to make an attack (Private member) - DONE
-    Variable called strength of data type int, random between 1-10, measuring how strong the warrior attack is (Private member)
+    Variable called strength of data type int, random between 1-10, measuring how strong the warrior attack is (Private member) -DONE
     Public Getter functions to access these variables
     Public Setter functions to change these variables
     A parameterized constructor that takes name, hp, stamina and strength
@@ -82,8 +86,8 @@ This class is derived from the Character class. A Wizard is a Character that fig
 
 The Wizard class will have:
 
-    Variable called mana of data type int, random between 10-50, representing a resource the wizard consumes to cast spells (Private member)
-    Variable called intelligence of data type int, random between 1-50, measuring how strong the wizard spells are (Private member)
+    Variable called mana of data type int, random between 10-50, representing a resource the wizard consumes to cast spells (Private member) - DONE
+    Variable called intelligence of data type int, random between 1-50, measuring how strong the wizard spells are (Private member) - DONE
     Public Getter functions to access these variables
     Public Setter functions to change these variables
     A parameterized constructor that takes name, hp, mana, and intelligence

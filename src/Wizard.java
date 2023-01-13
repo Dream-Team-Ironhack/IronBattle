@@ -8,10 +8,10 @@ public class Wizard extends Character implements Attacker {
 
 
 
-    public Wizard(String name, int mana, int intelligence) {
+    public Wizard(String name) {
         super(name);
-        this.mana = mana;
-        this.intelligence = intelligence;
+        setMana();
+        setIntelligence();
         setHp();
     }
 
@@ -21,16 +21,18 @@ public class Wizard extends Character implements Attacker {
         return mana;
     }
 
-    public void setMana(int mana) {
-        this.mana = mana;
+    public void setMana() {
+        int rand = new Random().nextInt(10, 51) ;
+        this.mana = rand;
     }
 
     public int getIntelligence() {
         return intelligence;
     }
 
-    public void setIntelligence(int intelligence) {
-        this.intelligence = intelligence;
+    public void setIntelligence() {
+        int rand = new Random().nextInt(1, 51) ;
+        this.intelligence = rand;
     }
 
     @Override
