@@ -28,4 +28,5 @@ public class Warrior extends Character implements Attacker{
     public void attack(Character character) {
 
     }
+
 }

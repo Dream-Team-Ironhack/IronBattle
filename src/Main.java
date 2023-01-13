@@ -1,5 +1,11 @@
 public class Main {
     public static void main(String[] args) {
+        Warrior warrior = new Warrior("Jaume", 3, 3, 10);
+        System.out.println(warrior.getId());
+        Warrior newWarrior = new Warrior("Jaume2", 3, 3, 10);
+        System.out.println(newWarrior.getId());
+        Warrior newNewWarrior = new Warrior("Jaume2", 3, 3, 10);
+        System.out.println(newNewWarrior.getId());
         /* Instructions
 
 Let’s walk through the details of the homework:
@@ -23,9 +29,15 @@ Character class
 
 This class will have:
 
-    Variable called id of data type string - DONE, auto-generated - NOT DONE (Private member)
+    Variable called id of data type string - DONE,
+
+    auto-generated - DONE (Private member)
+
     Variable called name of data type string (Private member) - DONE
-    Variable called hp of data type int - DONE, random between 100-200 to warriors and 50-100 for wizards, representing the health points (Private member) - NOT DONE
+    Variable called hp of data type int - DONE,
+
+    random between 100-200 to warriors and 50-100 for wizards, representing the health points (Private member) - NOT DONE
+
     Variable called isAlive of data type boolean defaulted to true (Private member) - DONE
     A “parameterized” constructor that takes name and hp (as parameters) - DONE
     Public Getter functions to access these variables - DONE
