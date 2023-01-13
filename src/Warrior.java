@@ -45,6 +45,31 @@ public class Warrior extends Character implements Attacker{
     @Override
     public void attack(Character character) {
 
+        int damage = 0;
+        int health = character.getHp();
+        int randomAttack = (int) (Math.random() * 2 + 1); // returns either 1 = weakAttack or 2=heavy Attack
+
+        // intending to make a method inside a method .. not sure if this is possible!!
+        /*
+        void weakAttack(int strength){
+            damage=(int)(this.strength*0.5);
+        }
+*/
+
+        // basic logic for warrior attack
+        if (randomAttack == 1) {
+            //weakAttack();
+        } else {
+            if (this.stamina < 5) {
+                //weakAttack();
+            } else {
+                //heavyAttack();
+            }
+        }
+
+
     }
+
+
 
 }
