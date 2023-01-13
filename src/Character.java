@@ -1,7 +1,6 @@
 public abstract class Character {
     //counter for ids
-    private static int counter = 0;
-    private String id;
+    public String id;
     private String name;
     private int hp;
     private boolean isAlive = true;
@@ -12,12 +11,19 @@ public abstract class Character {
         this.hp = hp;
     }
 
+    public Character(String name) {
+        setId();
+        this.name = name;
+
+    }
+
     public String getId() {
         return id;
     }
 
     public void setId() {
-        this.id = String.valueOf(counter++);
+
+        this.id = id;
     }
 
     public String getName() {

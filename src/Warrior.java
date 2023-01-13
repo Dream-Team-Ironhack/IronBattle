@@ -1,6 +1,7 @@
 public class Warrior extends Character implements Attacker{
     private int stamina;
     private int strength;
+    private static int count = 0;
 
     public Warrior(String name, int hp, int stamina, int strength) {
         super(name, hp);
@@ -24,6 +25,11 @@ public class Warrior extends Character implements Attacker{
         this.strength = strength;
     }
 
+    @Override
+    public void setId() {
+        super.setId();
+        this.id = "WA_" + String.valueOf(count++);
+    }
     @Override
     public void attack(Character character) {
 
