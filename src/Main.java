@@ -5,13 +5,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Warrior warrior = new Warrior("Jaume", 3, 3, 10);
+        Warrior warrior = new Warrior("Jaume");
         System.out.println(warrior.getId());
-        Warrior newWarrior = new Warrior("Jaume2", 3, 3, 10);
+        System.out.println(warrior.getHp());
+        System.out.println(warrior.getStamina());
+        System.out.println(warrior.getStrength());
+        Warrior newWarrior = new Warrior("Jaume2");
         System.out.println(newWarrior.getId());
-        Warrior newNewWarrior = new Warrior("Jaume2", 3, 3, 10);
+        System.out.println(newWarrior.getHp());
+        System.out.println(newWarrior.getStamina());
+        System.out.println(newWarrior.getStrength());
+        Warrior newNewWarrior = new Warrior("Jaume2");
         System.out.println(newNewWarrior.getId());
-        Wizard wizard = new Wizard("Jaume3",  6, 100);
+        Wizard wizard = new Wizard("Jaume3",  6,100);
         System.out.println(wizard.getHp());
         Wizard wizard2 = new Wizard("Jaume4",  6, 100);
         System.out.println(wizard2.getHp());
@@ -48,7 +54,7 @@ This class will have:
     Variable called name of data type string (Private member) - DONE
     Variable called hp of data type int - DONE,
 
-    random between 100-200 to warriors and 50-100 for wizards, representing the health points (Private member) - NOT DONE
+    random between 100-200 to warriors and 50-100 for wizards, representing the health points (Private member) - DONE
 
     Variable called isAlive of data type boolean defaulted to true (Private member) - DONE
     A “parameterized” constructor that takes name and hp (as parameters) - DONE
@@ -62,7 +68,7 @@ This class is derived from the Character class. A Warrior is a Character that fi
 
 The Warrior class will have:
 
-    Variable called stamina of data type int, random between 10-50, representing a resource the warrior consumes to make an attack (Private member)
+    Variable called stamina of data type int, random between 10-50, representing a resource the warrior consumes to make an attack (Private member) - DONE
     Variable called strength of data type int, random between 1-10, measuring how strong the warrior attack is (Private member)
     Public Getter functions to access these variables
     Public Setter functions to change these variables

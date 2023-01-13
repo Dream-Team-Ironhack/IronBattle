@@ -41,9 +41,8 @@ public class Wizard extends Character implements Attacker {
 
 
     public void setHp() {
-        Random rand = new Random();
-        int randomInt = rand.nextInt(51) + 50;
-        super.setHp(randomInt);
+        int rand = new Random().nextInt(50, 101) ;
+        super.setHp(rand);
 
 
     }
