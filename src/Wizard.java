@@ -49,8 +49,26 @@ public class Wizard extends Character implements Attacker {
 
     }
 
+
     @Override
     public void attack(Character character) {
 
+        int damage = 0;
+        int health = character.getHp();
+        int randomAttack = (int) (Math.random() * 2 + 1); // returns either 1 = weakAttack or 2=heavy Attack
+
+
+        // basic logic for warrior attack
+        if (randomAttack == 1 || this.mana < 5) {
+            //staffHit
+            character.setHp(health-2);
+            mana++;
+            System.out.println( this.getName() +" has done Staff Hit to "+ character.getName() +" and his remaining HP are "+ character.getHp());
+        } else if (randomAttack == 2 && this.mana>=5){
+            //Fireball();
+            character.setHp(health-intelligence);
+            mana=-5;
+            System.out.println(this.getName() +" has made a Fireball to " + character.getName() +" and his remaining HP are " + character.getHp());
+        }
     }
 }

@@ -49,21 +49,18 @@ public class Warrior extends Character implements Attacker{
         int health = character.getHp();
         int randomAttack = (int) (Math.random() * 2 + 1); // returns either 1 = weakAttack or 2=heavy Attack
 
-        // intending to make a method inside a method .. not sure if this is possible!!
-        /*
-        void weakAttack(int strength){
-            damage=(int)(this.strength*0.5);
-        }
-*/
 
         // basic logic for warrior attack
-        if (randomAttack == 1) {
-            //weakAttack();
-        } else {
-            if (this.stamina < 5) {
-                //weakAttack();
-            } else {
+        if (randomAttack == 1 || this.stamina < 5) {
+            //weakAttack
+           character.setHp(health-strength/2);
+           stamina++;
+            //System.out.println( this.getName() +" has done a weak attack to "+ character.getName() +"and his remaining HP are "+ character.getHp());
+        } else if (randomAttack == 2 && this.stamina>=5){
                 //heavyAttack();
+                character.setHp(health-strength);
+                stamina=-5;
+            //System.out.println(this.getName() +" has made a heavy attack to " + character.getName() +" and his remaining HP are " + character.getHp());
             }
         }
 
@@ -72,4 +69,4 @@ public class Warrior extends Character implements Attacker{
 
 
 
-}
+
