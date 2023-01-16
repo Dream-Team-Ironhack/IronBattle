@@ -18,7 +18,11 @@ public class Main {
        warrior.attack(newWarrior);
         System.out.println(newWarrior.getHp());
 
+        wizard2.setHp(3);
+        System.out.println(wizard2.isAlive());
         wizard.attack(wizard2);
+        System.out.println(wizard2.isAlive());
+
 
 
         /* Instructions
@@ -68,10 +72,10 @@ The Warrior class will have:
 
     Variable called stamina of data type int, random between 10-50, representing a resource the warrior consumes to make an attack (Private member) - DONE
     Variable called strength of data type int, random between 1-10, measuring how strong the warrior attack is (Private member) -DONE
-    Public Getter functions to access these variables
-    Public Setter functions to change these variables
+    Public Getter functions to access these variables DONE
+    Public Setter functions to change these variables DONE
     A parameterized constructor that takes name, hp, stamina and strength
-    A public function that overloads attack() implemented in the Attacker interface, that will take a character as a parameter and reduce that character’s health based on the strength of the attack.
+    A public function that overloads attack() implemented in the Attacker interface, that will take a character as a parameter and reduce that character’s health based on the strength of the attack. DONE
 
 
 Wizard class
@@ -82,10 +86,10 @@ The Wizard class will have:
 
     Variable called mana of data type int, random between 10-50, representing a resource the wizard consumes to cast spells (Private member) - DONE
     Variable called intelligence of data type int, random between 1-50, measuring how strong the wizard spells are (Private member) - DONE
-    Public Getter functions to access these variables
-    Public Setter functions to change these variables
-    A parameterized constructor that takes name, hp, mana, and intelligence
-    A public function that overloads attack() implemented in the Attacker interface, that will take a character as a parameter and reduce that character’s health based on the intelligence of the spell
+    Public Getter functions to access these variables DONE
+    Public Setter functions to change these variables DONE
+    A parameterized constructor that takes name, hp, mana, and intelligence - NOT DONE
+    A public function that overloads attack() implemented in the Attacker interface, that will take a character as a parameter and reduce that character’s health based on the intelligence of the spell DONE
 
 How the battle simulator works
 

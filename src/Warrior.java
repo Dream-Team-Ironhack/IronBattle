@@ -62,6 +62,10 @@ public class Warrior extends Character implements Attacker{
                 stamina=-5;
             //System.out.println(this.getName() +" has made a heavy attack to " + character.getName() +" and his remaining HP are " + character.getHp());
             }
+
+        if(character.getHp() <= 0){
+            character.setAlive(false);
+        }
         }
 
 
