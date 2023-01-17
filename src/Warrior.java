@@ -55,12 +55,12 @@ public class Warrior extends Character implements Attacker{
             //weakAttack
            character.setHp(health-strength/2);
            stamina++;
-            //System.out.println( this.getName() +" has done a weak attack to "+ character.getName() +"and his remaining HP are "+ character.getHp());
+            System.out.println( this.getName() +" has done a weak attack to "+ character.getName() +"and his remaining HP are "+ character.getHp());
         } else if (randomAttack == 2 && this.stamina>=5){
                 //heavyAttack();
                 character.setHp(health-strength);
                 stamina=-5;
-            //System.out.println(this.getName() +" has made a heavy attack to " + character.getName() +" and his remaining HP are " + character.getHp());
+            System.out.println(this.getName() +" has made a heavy attack to " + character.getName() +" and his remaining HP are " + character.getHp());
             }
 
         if(character.getHp() <= 0){

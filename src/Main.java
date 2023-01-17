@@ -15,13 +15,9 @@ public class Main {
 
         Wizard wizard2 = new Wizard("Jaume4");
 
-       warrior.attack(newWarrior);
-        System.out.println(newWarrior.getHp());
+       GameLogic.battle(wizard, wizard2);
 
-        wizard2.setHp(3);
-        System.out.println(wizard2.isAlive());
-        wizard.attack(wizard2);
-        System.out.println(wizard2.isAlive());
+
 
 
 
