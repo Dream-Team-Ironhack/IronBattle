@@ -15,8 +15,11 @@ public class Main {
 
         Wizard wizard2 = new Wizard("Jaume4");
 
+        wizard.setHp(30);
+        wizard2.setHp(30);
+        GameLogic.battle(wizard,wizard2);
        //GameLogic.battle(wizard, wizard2);
-        GameLogic.printMenu();
+        //GameLogic.printMenu();
 
 
 
@@ -39,7 +42,7 @@ This interface will have:
 
     A public void function attack() that takes a character as a parameter. - DONE
 
-We have two types of characters, warriors and wizards, who have different attributes and combat styles. You need to create a character class (that can’t be instantiated) that will contain base attributes that are common for both - warriors and wizards.
+We have two types of characters, warriors and wizards, who have different attributes and combat styles. You need to create a character class (that can’t be instantiated) that will contain base attributes that are common for both - warriors and wizards. - DONE
 
 Character class
 
@@ -71,7 +74,7 @@ The Warrior class will have:
     Variable called strength of data type int, random between 1-10, measuring how strong the warrior attack is (Private member) -DONE
     Public Getter functions to access these variables DONE
     Public Setter functions to change these variables DONE
-    A parameterized constructor that takes name, hp, stamina and strength
+    A parameterized constructor that takes name, hp, stamina and strength - DONE
     A public function that overloads attack() implemented in the Attacker interface, that will take a character as a parameter and reduce that character’s health based on the strength of the attack. DONE
 
 
@@ -85,12 +88,12 @@ The Wizard class will have:
     Variable called intelligence of data type int, random between 1-50, measuring how strong the wizard spells are (Private member) - DONE
     Public Getter functions to access these variables DONE
     Public Setter functions to change these variables DONE
-    A parameterized constructor that takes name, hp, mana, and intelligence - NOT DONE
+    A parameterized constructor that takes name, hp, mana, and intelligence - DONE
     A public function that overloads attack() implemented in the Attacker interface, that will take a character as a parameter and reduce that character’s health based on the intelligence of the spell DONE
 
 How the battle simulator works
 
-The characters are created before the battle starts. They can have either the same character type or different character types.
+The characters are created before the battle starts. They can have either the same character type or different character types. - DONE
 
 The battle is 1 vs. 1 and will be by rounds, in each round both combatants will attack at the same time (so even if one combatant does the killing blow both will take damage). So the combat could end in a tie. In case of a tie, the battle is restarted to have only one winner.
 

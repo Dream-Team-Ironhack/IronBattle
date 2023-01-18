@@ -15,6 +15,11 @@ public class Wizard extends Character implements Attacker {
         setHp();
     }
 
+    public Wizard(String name, int hp, int mana, int intelligence) {
+        super(name, hp);
+        this.mana = mana;
+        this.intelligence = intelligence;
+    }
 
 
     public int getMana() {
@@ -74,5 +79,11 @@ public class Wizard extends Character implements Attacker {
         if(character.getHp() <= 0){
             character.setAlive(false);
         }
+    }
+
+    @Override
+    public Wizard clone() {
+        Wizard clone2 = new Wizard(getName(), getHp(), getMana(), getIntelligence());
+        return clone2;
     }
 }

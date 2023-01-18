@@ -12,6 +12,12 @@ public class Warrior extends Character implements Attacker{
         setHp();
     }
 
+    public Warrior(String name, int hp, int stamina, int strength) {
+        super(name, hp);
+        this.stamina = stamina;
+        this.strength = strength;
+    }
+
     public int getStamina() {
         return stamina;
     }
@@ -68,8 +74,12 @@ public class Warrior extends Character implements Attacker{
         }
         }
 
-
+    @Override
+    public Warrior clone() {
+        Warrior clone = new Warrior(this.getName(), this.getHp(), this.getStrength(), this.getStrength());
+        return clone;
     }
+}
 
 
 
