@@ -5,19 +5,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Warrior warrior = new Warrior("Jaume");
+        Warrior warrior = new Warrior("JaumeWarrior");
 
         Warrior newWarrior = new Warrior("Jaume2");
 
         Warrior newNewWarrior = new Warrior("Jaume2");
 
-        Wizard wizard = new Wizard("Jaume3");
+        Wizard wizard = new Wizard("Pikachu");
 
-        Wizard wizard2 = new Wizard("Jaume4");
+        Wizard wizard2 = new Wizard("Charmander");
 
-        wizard.setHp(30);
-        wizard2.setHp(30);
-        GameLogic.battle(wizard,wizard2);
+        warrior.setHp(5);
+        newWarrior.setHp(5);
+        wizard.setHp(5);
+        wizard2.setHp(5);
+        GameLogic.battle(warrior,newWarrior);
        //GameLogic.battle(wizard, wizard2);
         //GameLogic.printMenu();
 

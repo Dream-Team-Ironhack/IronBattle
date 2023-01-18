@@ -76,7 +76,7 @@ public class Warrior extends Character implements Attacker{
 
     @Override
     public Warrior clone() {
-        Warrior clone = new Warrior(this.getName(), this.getHp(), this.getStrength(), this.getStrength());
+        Warrior clone = new Warrior(getName(), getHp(), getStrength(), getStrength());
         return clone;
     }
 }

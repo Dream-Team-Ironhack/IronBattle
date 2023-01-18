@@ -64,8 +64,11 @@ public class GameLogic {
         } else {
             clonPlayer2 = ((Wizard)player2).clone();
         }
-        System.out.println(clonPlayer2.getName());
+        System.out.println(clonPlayer1.getHp());
+
+        //the loop starts
         do{
+            //we create fresh clones every time there's a tie
 
             // we can not directly call attack method of character
             if(player1 instanceof Warrior){
@@ -82,31 +85,23 @@ public class GameLogic {
 
             if(player1.getHp() <= 0 && player2.getHp() <= 0){
                 System.out.println("It's a tie!");
-                player1 = clonPlayer1;
-                player2 = clonPlayer2;
 
-                /*player1.setAlive(true);
-                player2.setAlive(true);
-                player1.setHp(clonPlayer1.getHp());
-                player2.setHp(clonPlayer2.getHp());*/
-               /* int rand1 = new Random().nextInt(100, 201) ;
-                int rand2 = new Random().nextInt(50, 101) ;
-
+                //we return the original state of the players by cloning the clone itself
                 if(player1 instanceof Warrior){
-                    player1.setHp(rand1);
-                } else if(player1 instanceof Wizard){
-                    player1.setHp(rand2);
+                    player1 = ((Warrior) clonPlayer1).clone();
+                } else {
+                    player1 = ((Wizard)clonPlayer1).clone();
                 }
-
                 if(player2 instanceof Warrior){
-                    player2.setHp(rand1);
-                } else if(player2 instanceof Wizard){
-                    player2.setHp(rand2);
-                }*/
+                    player2 = ((Warrior) clonPlayer2).clone();
+                } else {
+                    player2 = ((Wizard)clonPlayer2).clone();
+                }
+                System.out.println(clonPlayer1.getHp());
 
             }
 
-        } while (/*player1.getHp() > 0 || player2.getHp() > 0*/ player1.isAlive() && player2.isAlive());
+        } while (player1.isAlive() && player2.isAlive());
 
 
         if(!player1.isAlive()){
