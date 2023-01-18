@@ -15,7 +15,8 @@ public class Main {
 
         Wizard wizard2 = new Wizard("Jaume4");
 
-       GameLogic.battle(wizard, wizard2);
+       //GameLogic.battle(wizard, wizard2);
+        GameLogic.printMenu();
 
 
 

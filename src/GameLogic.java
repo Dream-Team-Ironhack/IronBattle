@@ -1,6 +1,56 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class GameLogic {
+
+    static Scanner scanner = new Scanner(System.in);
+    public static int readInt(String prompt, int userChoices){
+        int input;
+        do {
+            System.out.println(prompt);
+            try {
+                input = Integer.parseInt(scanner.next());
+            } catch(Exception e) {
+                input = -1;
+                System.out.println("Please enter a valid option!");
+            }
+        } while (input < 1 || input > userChoices);
+
+        return input;
+    }
+    public static void printMenu() {
+        System.out.println("Choose an action: ");
+        System.out.println("(1) Let's Battle!");
+        System.out.println("(2) Extras");
+        System.out.println("(3) Exit Game");
+        int input = readInt("Introduzca una opción", 3);
+        if(input == 1){
+            System.out.println("(1) Random combatants");
+            System.out.println("(2) Generate your combatants");
+            System.out.println("(2) Import your combatants from a file");
+            int input1 = readInt("-> ", 3);
+            if(input1 == 1){
+                System.out.println("(1) Quick 1 vs 1");
+                System.out.println("(2) Tournament");
+                int input1_1 = readInt("-> ", 2);
+                if(input1_1==1){
+
+                    System.out.println("A quick random battle");
+                } else if (input1_1 == 2){
+                    System.out.println("More options, like how many combatants");
+                }
+            } else if(input1 == 2){
+                //generateCombatant();
+                System.out.println("User can generate the combatants here and let them fight");
+            } else {
+                System.out.println("Import combatants from a file");
+            }
+        } else if (input == 2) {
+            System.out.println("Extras, like a history of battles");
+        } else {
+            System.out.println("The came closes");
+        }
+    }
 
     public static void battle(Character player1, Character player2){
         Character clonPlayer1 = player1;
