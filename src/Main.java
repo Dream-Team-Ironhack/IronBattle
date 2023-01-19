@@ -33,9 +33,6 @@ public class Main {
             throw new RuntimeException(e);
         }
 
-        //GameLogic.battle(wizard, wizard2);
-
-
 
         /* Instructions
 
