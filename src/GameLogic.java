@@ -167,6 +167,12 @@ public class GameLogic {
             printSeparator(30);
             System.out.println();
         }
+
+        try {
+            printMenu();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void generateCombatants() throws InterruptedException {
