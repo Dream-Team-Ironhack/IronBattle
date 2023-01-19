@@ -52,7 +52,7 @@ public class Warrior extends Character implements Attacker{
     @Override
     public void attack(Character character) {
 
-        int damage = 0;
+
         int health = character.getHp();
         int randomAttack = (int) (Math.random() * 2 + 1); // returns either 1 = weakAttack or 2=heavy Attack
 
@@ -62,13 +62,11 @@ public class Warrior extends Character implements Attacker{
             //weakAttack
            character.setHp(health-strength/2);
            stamina++;
-            System.out.println( this.getName() +" has done a weak attack to "+ character.getName() +"and his remaining HP are "+ character.getHp());
-        } else if (randomAttack == 2 && this.stamina>=5){
+            System.out.println( this.getName() +" has done a weak attack to "+ character.getName() + ",dealing " + (strength/2) +" points of damage, and his remaining HP are "+ character.getHp());        } else if (randomAttack == 2 && this.stamina>=5){
                 //heavyAttack();
                 character.setHp(health-strength);
                 stamina=-5;
-            System.out.println(this.getName() +" has made a heavy attack to " + character.getName() +" and his remaining HP are " + character.getHp());
-            }
+            System.out.println(this.getName() +" has made a heavy attack to " + character.getName() + ",dealing " + (strength) + " points of damage, and his remaining HP are " + character.getHp());            }
 
         if(character.getHp() <= 0){
             character.setAlive(false);

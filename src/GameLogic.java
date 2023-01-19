@@ -72,9 +72,10 @@ public class GameLogic {
             clonPlayer2 = ((Wizard)player2).clone();
         }
         System.out.println(clonPlayer1.getHp());
-
+        int roundCount = 1;
         //the loop starts
         do{
+            System.out.println( "Ronda número: " + roundCount);
             //we create fresh clones every time there's a tie
 
             // we can not directly call attack method of character
@@ -105,7 +106,7 @@ public class GameLogic {
                     player2 = ((Wizard)clonPlayer2).clone();
                 }
                 System.out.println(clonPlayer1.getHp());
-
+                roundCount++;
             }
 
         } while (player1.isAlive() && player2.isAlive());
