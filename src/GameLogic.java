@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class GameLogic {
 
+
+
     static Scanner scanner = new Scanner(System.in);
     public static int readInt(String prompt, int userChoices){
         int input;
@@ -54,6 +56,8 @@ public class GameLogic {
     public static void battle(Character player1, Character player2){
         Character clonPlayer1;
         Character clonPlayer2;
+        int roundCount = 1;
+
         if(player1 instanceof Warrior){
             clonPlayer1 = ((Warrior) player1).clone();
         } else {
@@ -68,6 +72,7 @@ public class GameLogic {
 
         //the loop starts
         do{
+            System.out.println( "Ronda número: " + roundCount);
             //we create fresh clones every time there's a tie
 
             // we can not directly call attack method of character
@@ -100,6 +105,8 @@ public class GameLogic {
                 System.out.println(clonPlayer1.getHp());
 
             }
+            roundCount++;
+
 
         } while (player1.isAlive() && player2.isAlive());
 

@@ -15,10 +15,10 @@ public class Main {
 
         Wizard wizard2 = new Wizard("Charmander");
 
-        warrior.setHp(5);
-        newWarrior.setHp(5);
-        wizard.setHp(5);
-        wizard2.setHp(5);
+        warrior.setHp(50);
+        newWarrior.setHp(50);
+        wizard.setHp(50);
+        wizard2.setHp(50);
         GameLogic.battle(warrior,newWarrior);
        //GameLogic.battle(wizard, wizard2);
         //GameLogic.printMenu();
@@ -34,50 +34,26 @@ Classes
 
 Three classes and one interface are necessary to complete this homework:
 
-    These classes will be named: Character, Warrior and Wizard. - DONE
-    This interface will be called Attacker. - DONE
+
 
 
 Attacker interface
 
 This interface will have:
 
-    A public void function attack() that takes a character as a parameter. - DONE
 
-We have two types of characters, warriors and wizards, who have different attributes and combat styles. You need to create a character class (that can’t be instantiated) that will contain base attributes that are common for both - warriors and wizards. - DONE
+
+
 
 Character class
 
 This class will have:
 
-    Variable called id of data type string - DONE,
-
-    auto-generated - DONE (Private member)
-    Crear una id String en funcion de si es wizard o warrior, WI_1, WA_2 - DONE
-
-    Variable called name of data type string (Private member) - DONE
-    Variable called hp of data type int - DONE,
-
-    random between 100-200 to warriors and 50-100 for wizards, representing the health points (Private member) - DONE
-
-    Variable called isAlive of data type boolean defaulted to true (Private member) - DONE
-    A “parameterized” constructor that takes name and hp (as parameters) - DONE
-    Public Getter functions to access these variables - DONE
-    Public Setter functions to change these variables - DONE
 
 
 Warrior Class
 
-This class is derived from the Character class. A Warrior is a Character that fights by attacking. Attacks inflict damage and in order to do one, stamina is required
 
-The Warrior class will have:
-
-    Variable called stamina of data type int, random between 10-50, representing a resource the warrior consumes to make an attack (Private member) - DONE
-    Variable called strength of data type int, random between 1-10, measuring how strong the warrior attack is (Private member) -DONE
-    Public Getter functions to access these variables DONE
-    Public Setter functions to change these variables DONE
-    A parameterized constructor that takes name, hp, stamina and strength - DONE
-    A public function that overloads attack() implemented in the Attacker interface, that will take a character as a parameter and reduce that character’s health based on the strength of the attack. DONE
 
 
 Wizard class
@@ -86,16 +62,10 @@ This class is derived from the Character class. A Wizard is a Character that fig
 
 The Wizard class will have:
 
-    Variable called mana of data type int, random between 10-50, representing a resource the wizard consumes to cast spells (Private member) - DONE
-    Variable called intelligence of data type int, random between 1-50, measuring how strong the wizard spells are (Private member) - DONE
-    Public Getter functions to access these variables DONE
-    Public Setter functions to change these variables DONE
-    A parameterized constructor that takes name, hp, mana, and intelligence - DONE
-    A public function that overloads attack() implemented in the Attacker interface, that will take a character as a parameter and reduce that character’s health based on the intelligence of the spell DONE
+
 
 How the battle simulator works
 
-The characters are created before the battle starts. They can have either the same character type or different character types. - DONE
 
 The battle is 1 vs. 1 and will be by rounds, in each round both combatants will attack at the same time (so even if one combatant does the killing blow both will take damage). So the combat could end in a tie. In case of a tie, the battle is restarted to have only one winner.
 
