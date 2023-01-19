@@ -1,5 +1,11 @@
-import java.util.Random;
-import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
+
+import static java.nio.file.Files.*;
 
 public class GameLogic {
 
@@ -18,7 +24,7 @@ public class GameLogic {
 
         return input;
     }
-    public static void printMenu() {
+    public static void printMenu() throws IOException {
         System.out.println("Choose an action: ");
         System.out.println("(1) Let's Battle!");
         System.out.println("(2) Extras");
@@ -27,7 +33,7 @@ public class GameLogic {
         if(input == 1){
             System.out.println("(1) Random combatants");
             System.out.println("(2) Generate your combatants");
-            System.out.println("(2) Import your combatants from a file");
+            System.out.println("(3) Import your combatants from a file");
             int input1 = readInt("-> ", 3);
             if(input1 == 1){
                 System.out.println("(1) Quick 1 vs 1");
@@ -43,6 +49,7 @@ public class GameLogic {
                 System.out.println("User can generate the combatants here and let them fight");
             } else {
                 System.out.println("Import combatants from a file");
+                readCombatantsFromFile();
             }
         } else if (input == 2) {
             System.out.println("Extras, like a history of battles");
@@ -160,5 +167,53 @@ public class GameLogic {
         }
         battle(player1, player2);
         input.close();
+    }
+
+    public static void readCombatantsFromFile() throws IOException {
+
+        File file = new File("characters.csv");
+        Scanner read = new Scanner(file);
+        //read first combatant randomly from file
+        String player1 = readAllLines(Paths.get("characters.csv")).get(new Random().nextInt(1, 301));
+        //read second combatant randomly from file
+        String player2= readAllLines(Paths.get("characters.csv")).get(new Random().nextInt(1, 301));
+
+
+
+        while (player1.equals(player2)) {
+            player2= readAllLines(Paths.get("characters.csv")).get(new Random().nextInt(1, 301));
+        }
+
+        System.out.println(player1);
+        System.out.println(player2);
+
+        String[] player1array = player1.split(";");
+        Character char1;
+        if (player1array[1] == "Warrior") {
+            char1 = new Warrior(player1array[0], Integer.parseInt(player1array[2]), Integer.parseInt(player1array[5]),Integer.parseInt(player1array[4]));
+
+        } else {
+           char1 = new Wizard(player1array[0], Integer.parseInt(player1array[2]), Integer.parseInt(player1array[5]),Integer.parseInt(player1array[4]));
+        }
+
+
+        Character char2;
+        String[] player2array = player2.split(";");
+        if (player2array[1] == "Warrior") {
+            char2 = new Warrior(player2array[0], Integer.parseInt(player2array[2]), Integer.parseInt(player2array[5]),Integer.parseInt(player2array[4]));
+        } else {
+            char2 = new Wizard(player2array[0], Integer.parseInt(player2array[2]), Integer.parseInt(player2array[5]),Integer.parseInt(player2array[4]));
+        }
+
+        battle(char1,char2);
+
+//        List<Character> listOfChars= new ArrayList<>();
+//        listOfChars.add(char1);
+//        listOfChars.add(char2);
+//
+//        System.out.println(listOfChars.get(0).getName());
+//        System.out.println(listOfChars.get(1).getName());
+
+ //       return listOfChars;
     }
 }

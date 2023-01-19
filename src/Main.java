@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Random;
 
 public class Main {
@@ -15,119 +17,28 @@ public class Main {
 
         Wizard wizard2 = new Wizard("Charmander");
 
-        warrior.setHp(5);
-        newWarrior.setHp(5);
-        wizard.setHp(5);
-        wizard2.setHp(5);
-        GameLogic.battle(warrior,newWarrior);
-       //GameLogic.battle(wizard, wizard2);
-        //GameLogic.printMenu();
+//        warrior.setHp(5);
+//        newWarrior.setHp(5);
+//        wizard.setHp(5);
+//        wizard2.setHp(5);
+//        GameLogic.battle(warrior,newWarrior);
 
+        //GameLogic.battle(wizard, wizard2);
 
+        try {
+            GameLogic.printMenu();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        //GameLogic.battle(wizard, wizard2);
 
 
 
         /* Instructions
 
-Let’s walk through the details of the homework:
-Classes
-
-Three classes and one interface are necessary to complete this homework:
-
-    These classes will be named: Character, Warrior and Wizard. - DONE
-    This interface will be called Attacker. - DONE
-
-
-Attacker interface
-
-This interface will have:
-
-    A public void function attack() that takes a character as a parameter. - DONE
-
-We have two types of characters, warriors and wizards, who have different attributes and combat styles. You need to create a character class (that can’t be instantiated) that will contain base attributes that are common for both - warriors and wizards. - DONE
-
-Character class
-
-This class will have:
-
-    Variable called id of data type string - DONE,
-
-    auto-generated - DONE (Private member)
-    Crear una id String en funcion de si es wizard o warrior, WI_1, WA_2 - DONE
-
-    Variable called name of data type string (Private member) - DONE
-    Variable called hp of data type int - DONE,
-
-    random between 100-200 to warriors and 50-100 for wizards, representing the health points (Private member) - DONE
-
-    Variable called isAlive of data type boolean defaulted to true (Private member) - DONE
-    A “parameterized” constructor that takes name and hp (as parameters) - DONE
-    Public Getter functions to access these variables - DONE
-    Public Setter functions to change these variables - DONE
-
-
-Warrior Class
-
-This class is derived from the Character class. A Warrior is a Character that fights by attacking. Attacks inflict damage and in order to do one, stamina is required
-
-The Warrior class will have:
-
-    Variable called stamina of data type int, random between 10-50, representing a resource the warrior consumes to make an attack (Private member) - DONE
-    Variable called strength of data type int, random between 1-10, measuring how strong the warrior attack is (Private member) -DONE
-    Public Getter functions to access these variables DONE
-    Public Setter functions to change these variables DONE
-    A parameterized constructor that takes name, hp, stamina and strength - DONE
-    A public function that overloads attack() implemented in the Attacker interface, that will take a character as a parameter and reduce that character’s health based on the strength of the attack. DONE
-
-
-Wizard class
-
-This class is derived from the Character class. A Wizard is a Character that fights by casting spells. Spells inflict damage and require mana to be cast.
-
-The Wizard class will have:
-
-    Variable called mana of data type int, random between 10-50, representing a resource the wizard consumes to cast spells (Private member) - DONE
-    Variable called intelligence of data type int, random between 1-50, measuring how strong the wizard spells are (Private member) - DONE
-    Public Getter functions to access these variables DONE
-    Public Setter functions to change these variables DONE
-    A parameterized constructor that takes name, hp, mana, and intelligence - DONE
-    A public function that overloads attack() implemented in the Attacker interface, that will take a character as a parameter and reduce that character’s health based on the intelligence of the spell DONE
-
-How the battle simulator works
-
-The characters are created before the battle starts. They can have either the same character type or different character types. - DONE
-
-The battle is 1 vs. 1 and will be by rounds, in each round both combatants will attack at the same time (so even if one combatant does the killing blow both will take damage). So the combat could end in a tie. In case of a tie, the battle is restarted to have only one winner.
-
-A complete log of the battle will be displayed on the command line. When the battle is over the winner should be displayed as well.
-Character Attacks
-
-Both wizards and warriors will have the same attack command defined by an interface called Attacker.
-
-    Warrior:
-
-    Warriors are strong well-armored characters that focus on the attribute of strength. Every round a warrior will have randomly either a Heavy attack or a Weak attack. The damage of a Heavy attack is equal to their strength and every hit will decrease their stamina by 5 points. The damage of a Weak attack is half of the strength (truncate decimals). Every Weak attack will recover his stamina by 1.
-
-    If a warrior does not have the stamina to make a Heavy attack he will do a Weak attack instead.
-
-    If a warrior does not have the stamina to do a Weak attack he will not inflict any damage and recover his stamina by 2.
-
-    Wizard:
-
-    Wizards are the masters of the arcane their main attribute is intelligence. Every round a wizard will try to randomly cast either a Fireball or a Staff hit. The damage of a Fireball is equal to his intelligence and every Fireball will decrease their mana by 5 points. The damage of a staff hit is equal to 2. Every staff hit will recover his mana by 1.
-
-    If a wizard does not have the mana to cast a Fireball he will do a Staff hit instead.
-
-    If a wizard does not have the mana to cast a Staff hit he will not inflict any damage and recover his mana by 2.
-
-Requirements
-
-For this project you must accomplish all of the following:
-
-    Navigate through a text-based menu using Standard Input and Output.
-    Create warriors and wizards individually customizing their stats and name.
-    Have a battle between the characters and determines the winner.
-    Keep a detailed log (on the standard output) of every action taken during the duels.
 
 Bonus
 
@@ -143,5 +54,6 @@ Important Notes
     This is intended to be a challenging assignment. You will have to rely heavily on your teammates and independent research. Learning independently is a hallmark of a good developer and our job is to turn you into good developers. This process may be frustrating but you will learn a ton!
 
  */
+
     }
 }
