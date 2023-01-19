@@ -24,31 +24,44 @@ public class GameLogic {
 
         return input;
     }
-    public static void printMenu() throws IOException {
-        System.out.println("Choose an action: ");
+    public static void printMenu() throws IOException, InterruptedException {
+
+        System.out.println("Welcome to...");
+        System.out.println("▄▄▄█████▓ ██░ ██ ▓█████     ▄████▄   ██▓     ▒█████   ███▄    █ ▓█████     █     █░ ▄▄▄       ██▀███    ██████ \n" +
+                "▓  ██▒ ▓▒▓██░ ██▒▓█   ▀    ▒██▀ ▀█  ▓██▒    ▒██▒  ██▒ ██ ▀█   █ ▓█   ▀    ▓█░ █ ░█░▒████▄    ▓██ ▒ ██▒▒██    ▒ \n" +
+                "▒ ▓██░ ▒░▒██▀▀██░▒███      ▒▓█    ▄ ▒██░    ▒██░  ██▒▓██  ▀█ ██▒▒███      ▒█░ █ ░█ ▒██  ▀█▄  ▓██ ░▄█ ▒░ ▓██▄   \n" +
+                "░ ▓██▓ ░ ░▓█ ░██ ▒▓█  ▄    ▒▓▓▄ ▄██▒▒██░    ▒██   ██░▓██▒  ▐▌██▒▒▓█  ▄    ░█░ █ ░█ ░██▄▄▄▄██ ▒██▀▀█▄    ▒   ██▒\n" +
+                "  ▒██▒ ░ ░▓█▒░██▓░▒████▒   ▒ ▓███▀ ░░██████▒░ ████▓▒░▒██░   ▓██░░▒████▒   ░░██▒██▓  ▓█   ▓██▒░██▓ ▒██▒▒██████▒▒\n" +
+                "  ▒ ░░    ▒ ░░▒░▒░░ ▒░ ░   ░ ░▒ ▒  ░░ ▒░▓  ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░░ ▒░ ░   ░ ▓░▒ ▒   ▒▒   ▓▒█░░ ▒▓ ░▒▓░▒ ▒▓▒ ▒ ░\n" +
+                "    ░     ▒ ░▒░ ░ ░ ░  ░     ░  ▒   ░ ░ ▒  ░  ░ ▒ ▒░ ░ ░░   ░ ▒░ ░ ░  ░     ▒ ░ ░    ▒   ▒▒ ░  ░▒ ░ ▒░░ ░▒  ░ ░\n" +
+                "  ░       ░  ░░ ░   ░      ░          ░ ░   ░ ░ ░ ▒     ░   ░ ░    ░        ░   ░    ░   ▒     ░░   ░ ░  ░  ░  \n" +
+                "          ░  ░  ░   ░  ░   ░ ░          ░  ░    ░ ░           ░    ░  ░       ░          ░  ░   ░           ░  \n" +
+                "                           ░                                                                                   ");
+        System.out.println("IRON BATTLE - THE CLONE WARS");
+        printSeparator(30);
+        System.out.println("What do you want to do today? ");
         System.out.println("(1) Let's Battle!");
         System.out.println("(2) Exit Game");
-        int input = readInt("Introduzca una opción", 2);
+        int input = readInt("Select an option", 2);
         if(input == 1){
-            System.out.println("(1) Random combatants");
-            System.out.println("(2) Generate your combatants");
-            System.out.println("(3) Import your combatants from a file");
-            int input1 = readInt("-> ", 3);
+            System.out.println("(1) Name your combatants and let them fight!");
+            System.out.println("(2) Battle with two combatants selected randomly from a csv file");
+            int input1 = readInt("Select an option", 2);
             if(input1 == 1){
-                System.out.println("(1) Quick 1 vs 1");
-            } else if(input1 == 2){
                 generateCombatants();
-                System.out.println("User can generate the combatants here and let them fight");
-            } else {
-                System.out.println("Import combatants from a file");
+                System.out.println("Thanks for playing, see you soon!");
+            } else if(input1 == 2){
                 readCombatantsFromFile();
+
+                System.out.println("Thanks for playing, see you soon!");
             }
         } else {
-            System.out.println("The came closes");
+            System.out.println("See you soon!");
+
         }
     }
 
-    public static void battle(Character player1, Character player2){
+    public static void battle(Character player1, Character player2) throws InterruptedException {
         Character clonPlayer1;
         Character clonPlayer2;
         if(player1 instanceof Warrior){
@@ -61,11 +74,13 @@ public class GameLogic {
         } else {
             clonPlayer2 = ((Wizard)player2).clone();
         }
-        System.out.println(clonPlayer1.getHp());
         int roundCount = 1;
         //the loop starts
         do{
-            System.out.println( "Ronda número: " + roundCount);
+            System.out.println();
+            System.out.println( "Round number " + roundCount);
+            roundCount++;
+            printSeparator(20);
             //we create fresh clones every time there's a tie
 
             // we can not directly call attack method of character
@@ -95,32 +110,64 @@ public class GameLogic {
                 } else {
                     player2 = ((Wizard)clonPlayer2).clone();
                 }
-                System.out.println(clonPlayer1.getHp());
-                roundCount++;
-            }
 
+            }
+            Thread.sleep(100);
         } while (player1.isAlive() && player2.isAlive());
 
 
         if(!player1.isAlive()){
-            System.out.println( player1.getName() + " is dead. " + player2.getName() + " WON !!!");
+            System.out.println();
+            printSeparator(30);
+            System.out.println( player1.getName() + " is dead.");
+            System.out.println(player2.getName() + " IS THE ABSOLUTE...");
+            System.out.println(" █████   ███   █████ █████ ██████   █████ ██████   █████ ██████████ ███████████  \n" +
+                    "░░███   ░███  ░░███ ░░███ ░░██████ ░░███ ░░██████ ░░███ ░░███░░░░░█░░███░░░░░███ \n" +
+                    " ░███   ░███   ░███  ░███  ░███░███ ░███  ░███░███ ░███  ░███  █ ░  ░███    ░███ \n" +
+                    " ░███   ░███   ░███  ░███  ░███░░███░███  ░███░░███░███  ░██████    ░██████████  \n" +
+                    " ░░███  █████  ███   ░███  ░███ ░░██████  ░███ ░░██████  ░███░░█    ░███░░░░░███ \n" +
+                    "  ░░░█████░█████░    ░███  ░███  ░░█████  ░███  ░░█████  ░███ ░   █ ░███    ░███ \n" +
+                    "    ░░███ ░░███      █████ █████  ░░█████ █████  ░░█████ ██████████ █████   █████\n" +
+                    "     ░░░   ░░░      ░░░░░ ░░░░░    ░░░░░ ░░░░░    ░░░░░ ░░░░░░░░░░ ░░░░░   ░░░░░ \n" +
+                    "                                                                                 \n" +
+                    "                                                                                 \n" +
+                    "                                                                                 ");
+            printSeparator(30);
+            System.out.println();
         } else if(!player2.isAlive()){
-            System.out.println( player2.getName() + " is dead. " + player1.getName() + " WON !!!");
+            System.out.println();
+            printSeparator(30);
+            System.out.println( player2.getName() + " is dead.");
+            System.out.println(player1.getName() + " IS THE ABSOLUTE...");
+            System.out.println(" █████   ███   █████ █████ ██████   █████ ██████   █████ ██████████ ███████████  \n" +
+                    "░░███   ░███  ░░███ ░░███ ░░██████ ░░███ ░░██████ ░░███ ░░███░░░░░█░░███░░░░░███ \n" +
+                    " ░███   ░███   ░███  ░███  ░███░███ ░███  ░███░███ ░███  ░███  █ ░  ░███    ░███ \n" +
+                    " ░███   ░███   ░███  ░███  ░███░░███░███  ░███░░███░███  ░██████    ░██████████  \n" +
+                    " ░░███  █████  ███   ░███  ░███ ░░██████  ░███ ░░██████  ░███░░█    ░███░░░░░███ \n" +
+                    "  ░░░█████░█████░    ░███  ░███  ░░█████  ░███  ░░█████  ░███ ░   █ ░███    ░███ \n" +
+                    "    ░░███ ░░███      █████ █████  ░░█████ █████  ░░█████ ██████████ █████   █████\n" +
+                    "     ░░░   ░░░      ░░░░░ ░░░░░    ░░░░░ ░░░░░    ░░░░░ ░░░░░░░░░░ ░░░░░   ░░░░░ \n" +
+                    "                                                                                 \n" +
+                    "                                                                                 \n" +
+                    "                                                                                 ");
+            printSeparator(30);
+            System.out.println();
         }
     }
 
-    public static void generateCombatants(){
+    public static void generateCombatants() throws InterruptedException {
         Character player1 = null;
         Character player2 = null;
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Welcome - let the game begin!");
+        System.out.println("Get ready for the next battle!");
         System.out.println("Player1, please Enter your name");
         String namePlayer1 = input.nextLine();
         System.out.println("Hello " + namePlayer1 +"!");
         int choice = 0;
         while(choice !=1 && choice !=2){
             System.out.println("Please choose a character. Enter 1 for Wizard or 2 for Warrior");
+            System.out.println("(1) Wizard\n(2) Warrior");
             try{
                 choice = Integer.parseInt(input.nextLine());
                 if(choice == 1){
@@ -142,6 +189,7 @@ public class GameLogic {
         int choice2 = 0;
         while(choice2 !=1 && choice2 !=2){
             System.out.println("Please choose a character. Enter 1 for Wizard or 2 for Warrior");
+            System.out.println("(1) Wizard\n(2) Warrior");
             try{
                 choice2 = Integer.parseInt(input.nextLine());
                 if(choice2 == 1){
@@ -160,7 +208,7 @@ public class GameLogic {
         input.close();
     }
 
-    public static void readCombatantsFromFile() throws IOException {
+    public static void readCombatantsFromFile() throws IOException, InterruptedException {
 
         File file = new File("characters.csv");
         Scanner read = new Scanner(file);
@@ -175,8 +223,7 @@ public class GameLogic {
             player2= readAllLines(Paths.get("characters.csv")).get(new Random().nextInt(1, 301));
         }
 
-        System.out.println(player1);
-        System.out.println(player2);
+
 
         String[] player1array = player1.split(";");
         Character char1;
@@ -196,6 +243,18 @@ public class GameLogic {
             char2 = new Wizard(player2array[0], Integer.parseInt(player2array[2]), Integer.parseInt(player2array[5]),Integer.parseInt(player2array[4]));
         }
 
+        printSeparator(30);
+        System.out.println("GET READY");
+        System.out.println(char1.getName() + " VERSUS " + char2.getName());
+        Thread.sleep(1000);
+        System.out.println("BATTLE STARTS IN");
+        System.out.println("3");
+        Thread.sleep(1000);
+        System.out.println("2");
+        Thread.sleep(1000);
+        System.out.println("1");
+        Thread.sleep(1000);
+
         battle(char1,char2);
 
 //        List<Character> listOfChars= new ArrayList<>();
@@ -206,5 +265,12 @@ public class GameLogic {
 //        System.out.println(listOfChars.get(1).getName());
 
  //       return listOfChars;
+    }
+
+    public static void printSeparator(int n){
+        for (int i = 0; i < n; i++){
+            System.out.print("-");
+        }
+        System.out.println();
     }
 }

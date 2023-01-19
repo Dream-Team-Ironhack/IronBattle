@@ -72,7 +72,7 @@ public class Wizard extends Character implements Attacker {
             //Fireball();
             character.setHp(health-intelligence);
             mana=-5;
-            System.out.println(this.getName() +" has made a Fireball to " + character.getName() + ", dealing " + (intelligence) + " points of damage, and his remaining HP are " + character.getHp());        }
+            System.out.println(this.getName() +" has casted a Fireball to " + character.getName() + ", dealing " + (intelligence) + " points of damage, and his remaining HP are " + character.getHp());        }
 
         if(character.getHp() <= 0){
             character.setAlive(false);
