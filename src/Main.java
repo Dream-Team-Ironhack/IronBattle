@@ -17,7 +17,7 @@ public class Main {
 
         Wizard wizard2 = new Wizard("Charmander");
 
-
+1
         try {
             GameLogic.printMenu();
         } catch (FileNotFoundException e) {
