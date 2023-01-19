@@ -1,0 +1,301 @@
+name;Character;hp;isAlive;intel/strength;stamina/mana;id
+Amazon;Warrior;153;true;9;48;WA_1
+Majesty;Warrior;100;true;9;32;WA_2
+Anomaly;Warrior;132;true;9;32;WA_3
+Malice;Warrior;199;true;8;16;WA_4
+Banshee;Warrior;171;true;6;18;WA_5
+Mannequin;Warrior;114;true;6;42;WA_6
+Belladonna;Warrior;197;true;3;45;WA_7
+Minx;Warrior;109;true;9;39;WA_8
+Beretta;Warrior;107;true;6;13;WA_9
+Mirage;Warrior;166;true;8;12;WA_10
+Black Beauty;Warrior;170;true;7;36;WA_11
+Nightmare;Warrior;189;true;4;15;WA_12
+Calypso;Warrior;138;true;3;30;WA_13
+Nova;Warrior;111;true;10;34;WA_14
+Carbon;Warrior;187;true;3;44;WA_15
+Pumps;Warrior;101;true;7;14;WA_16
+Cascade;Warrior;125;true;4;22;WA_17
+Raven;Warrior;111;true;4;48;WA_18
+Colada;Warrior;177;true;6;22;WA_19
+Resin;Warrior;120;true;7;21;WA_20
+Cosma;Warrior;114;true;2;39;WA_21
+Riveter;Warrior;152;true;1;41;WA_22
+Cougar;Warrior;189;true;3;49;WA_23
+Rogue;Warrior;134;true;3;13;WA_24
+Countess;Warrior;177;true;3;29;WA_25
+Roulette;Warrior;136;true;6;25;WA_26
+Enchantress;Warrior;100;true;9;23;WA_27
+Shadow;Warrior;192;true;6;32;WA_28
+Enigma;Warrior;111;true;6;26;WA_29
+Siren;Warrior;146;true;7;15;WA_30
+Femme Fatale;Warrior;143;true;5;12;WA_31
+Stiletto;Warrior;128;true;2;43;WA_32
+Firecracker;Warrior;120;true;5;39;WA_33
+Tattoo;Warrior;115;true;2;15;WA_34
+Geisha;Warrior;149;true;3;18;WA_35
+T-Back;Warrior;107;true;9;47;WA_36
+Goddess;Warrior;186;true;5;41;WA_37
+Temperance;Warrior;109;true;4;25;WA_38
+Half Pint;Warrior;145;true;5;18;WA_39
+Tequila;Warrior;107;true;8;29;WA_40
+Harlem;Warrior;128;true;3;22;WA_41
+Terror;Warrior;118;true;9;24;WA_42
+Heroin;Warrior;196;true;2;25;WA_43
+Thunderbird;Warrior;145;true;8;45;WA_44
+Infinity;Warrior;145;true;5;49;WA_45
+Ultra;Warrior;116;true;7;31;WA_46
+Insomnia;Warrior;183;true;5;10;WA_47
+Vanity;Warrior;121;true;7;18;WA_48
+Ivy;Warrior;110;true;3;47;WA_49
+Velvet;Warrior;118;true;7;13;WA_50
+Legacy;Warrior;116;true;6;28;WA_51
+Vixen;Warrior;190;true;8;37;WA_52
+Lithium;Warrior;114;true;6;21;WA_53
+Voodoo;Warrior;114;true;9;16;WA_54
+Lolita;Warrior;174;true;8;41;WA_55
+Wicked;Warrior;195;true;2;43;WA_56
+Lotus;Warrior;198;true;8;22;WA_57
+Widow;Warrior;172;true;6;36;WA_58
+Mademoiselle;Warrior;110;true;3;15;WA_59
+Xenon;Warrior;110;true;2;37;WA_60
+Aspect;Warrior;155;true;7;25;WA_61
+Kraken;Warrior;176;true;7;25;WA_62
+Bender;Warrior;111;true;8;46;WA_63
+Lynch;Warrior;182;true;1;48;WA_64
+Big Papa;Warrior;167;true;2;19;WA_65
+Mad Dog;Warrior;164;true;2;32;WA_66
+Bowser;Warrior;153;true;9;25;WA_67
+O'Doyle;Warrior;167;true;6;29;WA_68
+Bruise;Warrior;187;true;7;20;WA_69
+Psycho;Warrior;198;true;6;15;WA_70
+Cannon;Warrior;117;true;4;13;WA_71
+Ranger;Warrior;157;true;7;39;WA_72
+Clink;Warrior;180;true;2;34;WA_73
+Ratchet;Warrior;119;true;5;42;WA_74
+Cobra;Warrior;150;true;1;11;WA_75
+Reaper;Warrior;141;true;2;33;WA_76
+Colt;Warrior;138;true;7;44;WA_77
+Rigs;Warrior;142;true;5;27;WA_78
+Crank;Warrior;107;true;8;11;WA_79
+Ripley;Warrior;111;true;9;34;WA_80
+Creep;Warrior;122;true;6;28;WA_81
+Roadkill;Warrior;121;true;8;42;WA_82
+Daemon;Warrior;196;true;6;48;WA_83
+Ronin;Warrior;186;true;3;30;WA_84
+Decay;Warrior;182;true;1;39;WA_85
+Rubble;Warrior;188;true;6;42;WA_86
+Diablo;Warrior;154;true;8;49;WA_87
+Sasquatch;Warrior;180;true;2;42;WA_88
+Doom;Warrior;120;true;9;16;WA_89
+Scar;Warrior;175;true;1;37;WA_90
+Dracula;Warrior;182;true;9;47;WA_91
+Shiver;Warrior;181;true;5;39;WA_92
+Dragon;Warrior;145;true;10;27;WA_93
+Skinner;Warrior;140;true;8;32;WA_94
+Fender;Warrior;165;true;9;37;WA_95
+Skull Crusher;Warrior;179;true;9;43;WA_96
+Fester;Warrior;104;true;6;49;WA_97
+Slasher;Warrior;195;true;3;40;WA_98
+Fisheye;Warrior;184;true;5;17;WA_99
+Steelshot;Warrior;153;true;5;50;WA_100
+Flack;Warrior;172;true;9;17;WA_101
+Surge;Warrior;123;true;4;48;WA_102
+Gargoyle;Warrior;112;true;3;48;WA_103
+Sythe;Warrior;181;true;6;28;WA_104
+Grave;Warrior;194;true;5;47;WA_105
+Trip;Warrior;166;true;3;32;WA_106
+Gunner;Warrior;173;true;8;21;WA_107
+Trooper;Warrior;135;true;4;22;WA_108
+Hash;Warrior;105;true;5;26;WA_109
+Tweek;Warrior;137;true;8;41;WA_110
+Hashtag;Warrior;196;true;2;42;WA_111
+Vein;Warrior;151;true;7;23;WA_112
+Indominus;Warrior;173;true;10;16;WA_113
+Void;Warrior;172;true;3;26;WA_114
+Ironclad;Warrior;140;true;3;35;WA_115
+Wardon;Warrior;160;true;1;34;WA_116
+Killer;Warrior;137;true;6;49;WA_117
+Wraith;Warrior;118;true;7;19;WA_118
+Knuckles;Warrior;161;true;2;30;WA_119
+Zero;Warrior;140;true;3;37;WA_120
+Steel;Warrior;168;true;3;33;WA_121
+Kevlar;Warrior;133;true;9;13;WA_122
+Lightning;Warrior;199;true;10;36;WA_123
+Tito;Warrior;179;true;7;16;WA_124
+Bullet-Proof;Warrior;181;true;3;35;WA_125
+Fire-Bred;Warrior;136;true;2;17;WA_126
+Titanium;Warrior;103;true;2;18;WA_127
+Hurricane;Warrior;111;true;9;37;WA_128
+Ironsides;Warrior;171;true;3;17;WA_129
+Iron-Cut;Warrior;110;true;5;31;WA_130
+Tempest;Warrior;198;true;4;22;WA_131
+Iron Heart;Warrior;114;true;10;46;WA_132
+Steel Forge;Warrior;163;true;5;14;WA_133
+Pursuit;Warrior;146;true;2;48;WA_134
+Steel Foil;Warrior;150;true;9;39;WA_135
+Sick Rebellious Names;Warrior;197;true;3;44;WA_136
+Upsurge;Warrior;154;true;8;46;WA_137
+Uprising;Warrior;140;true;8;48;WA_138
+Overthrow;Warrior;132;true;3;43;WA_139
+Breaker;Warrior;121;true;6;34;WA_140
+Sabotage;Warrior;123;true;3;12;WA_141
+Dissent;Warrior;146;true;3;49;WA_142
+Subversion;Warrior;198;true;2;44;WA_143
+Rebellion;Warrior;170;true;2;18;WA_144
+Insurgent;Warrior;198;true;4;31;WA_145
+Accidental Genius;Warrior;167;true;6;22;WA_146
+Acid Gosling;Warrior;113;true;6;16;WA_147
+Admiral Tot;Warrior;180;true;8;22;WA_148
+AgentHercules;Warrior;190;true;8;49;WA_149
+Airport Hobo;Warrior;169;true;6;14;WA_150
+Alley Frog;Wizard;79;true;8;12;WI_1
+Alpha;Wizard;71;true;24;45;WI_2
+AlphaReturns;Wizard;66;true;33;30;WI_3
+Angel;Wizard;92;true;28;37;WI_4
+AngelsCreed;Wizard;91;true;4;22;WI_5
+Arsenic Coo;Wizard;78;true;32;34;WI_6
+Atomic Blastoid;Wizard;85;true;6;29;WI_7
+Automatic Slicer;Wizard;71;true;27;23;WI_8
+Baby Brown;Wizard;58;true;15;37;WI_9
+Back Bett;Wizard;92;true;35;30;WI_10
+Bad Bunny;Wizard;97;true;42;36;WI_11
+Bazooka Har-de-har;Wizard;86;true;16;40;WI_12
+Bearded Angler;Wizard;56;true;4;49;WI_13
+Beetle King;Wizard;76;true;38;19;WI_14
+Betty Cricket;Wizard;89;true;22;34;WI_15
+Bit Sentinel;Wizard;54;true;33;26;WI_16
+Bitmap;Wizard;90;true;31;17;WI_17
+BlacKitten;Wizard;91;true;26;12;WI_18
+Blister;Wizard;78;true;5;21;WI_19
+Blistered Outlaw;Wizard;71;true;34;17;WI_20
+Blitz;Wizard;76;true;6;38;WI_21
+BloodEater;Wizard;55;true;6;46;WI_22
+Bonzai;Wizard;97;true;32;44;WI_23
+BoomBeachLuvr;Wizard;80;true;30;28;WI_24
+BoomBlaster;Wizard;62;true;29;41;WI_25
+Bootleg Taximan;Wizard;100;true;16;12;WI_26
+Bowie;Wizard;55;true;34;40;WI_27
+Bowler;Wizard;79;true;15;22;WI_28
+Breadmaker;Wizard;62;true;21;22;WI_29
+Broomspun;Wizard;81;true;6;20;WI_30
+Buckshot;Wizard;68;true;11;11;WI_31
+Bug Blitz;Wizard;87;true;13;27;WI_32
+Bug Fire;Wizard;84;true;25;46;WI_33
+Bugger;Wizard;75;true;16;33;WI_34
+Cabbie;Wizard;85;true;43;46;WI_35
+Candy Butcher;Wizard;95;true;42;30;WI_36
+Capital F;Wizard;93;true;19;37;WI_37
+Captain Peroxide;Wizard;69;true;13;13;WI_38
+Celtic Charger;Wizard;81;true;6;39;WI_39
+Centurion Sherman;Wizard;82;true;24;40;WI_40
+Cereal Killer;Wizard;57;true;6;44;WI_41
+Chasm Face;Wizard;50;true;48;14;WI_42
+Chew Chew;Wizard;61;true;3;15;WI_43
+Chicago Blackout;Wizard;77;true;13;26;WI_44
+Ballistic;Wizard;94;true;33;10;WI_45
+Furore;Wizard;86;true;12;30;WI_46
+Uproar;Wizard;64;true;39;31;WI_47
+Fury;Wizard;53;true;7;33;WI_48
+Ire;Wizard;66;true;1;47;WI_49
+Demented;Wizard;66;true;21;28;WI_50
+Wrath;Wizard;53;true;45;35;WI_51
+Madness;Wizard;57;true;25;13;WI_52
+Schizo;Wizard;70;true;10;23;WI_53
+Rage;Wizard;66;true;48;31;WI_54
+Savage;Wizard;97;true;46;45;WI_55
+Manic;Wizard;88;true;20;47;WI_56
+Frenzy;Wizard;51;true;5;23;WI_57
+Mania;Wizard;100;true;15;42;WI_58
+Derange;Wizard;82;true;2;33;WI_59
+CobraBite;Wizard;76;true;7;35;WI_60
+Cocktail;Wizard;52;true;34;25;WI_61
+CollaterolDamage;Wizard;97;true;43;33;WI_62
+CommandX;Wizard;84;true;15;20;WI_63
+Commando;Wizard;89;true;37;28;WI_64
+Congo Wire;Wizard;97;true;45;29;WI_65
+Cool Iris;Wizard;71;true;14;42;WI_66
+Cool Whip;Wizard;61;true;40;40;WI_67
+Cosmo;Wizard;73;true;42;15;WI_68
+Crash Override;Wizard;69;true;2;41;WI_69
+Crash Test;Wizard;96;true;12;24;WI_70
+Crazy Eights;Wizard;91;true;8;24;WI_71
+Criss Cross;Wizard;64;true;39;34;WI_72
+Cross Thread;Wizard;55;true;18;11;WI_73
+Cujo;Wizard;54;true;34;26;WI_74
+Cupid Dust;Wizard;72;true;40;41;WI_75
+Daffy Girl;Wizard;52;true;28;35;WI_76
+Dahlia Bumble;Wizard;52;true;21;31;WI_77
+DaisyCraft;Wizard;89;true;11;12;WI_78
+Dancing Madman;Wizard;94;true;1;12;WI_79
+Dangle;Wizard;93;true;19;44;WI_80
+DanimalDaze;Wizard;68;true;15;15;WI_81
+Dark Horse;Wizard;88;true;42;19;WI_82
+Darkside Orbit;Wizard;52;true;24;33;WI_83
+Darling Peacock;Wizard;68;true;1;13;WI_84
+Day Hawk;Wizard;87;true;16;49;WI_85
+Desert Haze;Wizard;51;true;2;14;WI_86
+Desperado;Wizard;58;true;24;37;WI_87
+Devil Blade;Wizard;99;true;19;45;WI_88
+Devil Chick;Wizard;59;true;26;47;WI_89
+Dexter;Wizard;59;true;49;11;WI_90
+Diamond Gamer;Wizard;97;true;44;13;WI_91
+Digger;Wizard;77;true;27;20;WI_92
+Disco Potato;Wizard;68;true;21;18;WI_93
+Disco Thunder;Wizard;52;true;19;27;WI_94
+DiscoMate;Wizard;80;true;30;38;WI_95
+Don Stab;Wizard;84;true;23;43;WI_96
+Doz Killer;Wizard;73;true;18;47;WI_97
+Dredd;Wizard;64;true;33;32;WI_98
+DriftDetector;Wizard;91;true;7;32;WI_99
+DriftManiac;Wizard;69;true;4;13;WI_100
+Drop Stone;Wizard;80;true;42;22;WI_101
+Dropkick;Wizard;75;true;20;44;WI_102
+Drugstore Cowboy;Wizard;85;true;38;33;WI_103
+DuckDuck;Wizard;95;true;42;16;WI_104
+Earl of Arms;Wizard;98;true;8;30;WI_105
+Easy Sweep;Wizard;74;true;39;22;WI_106
+Eerie Mizzen;Wizard;83;true;29;27;WI_107
+ElactixNova;Wizard;50;true;35;30;WI_108
+Elder Pogue;Wizard;92;true;20;40;WI_109
+Electric Player;Wizard;83;true;2;50;WI_110
+Electric Saturn;Wizard;53;true;39;40;WI_111
+Ember Rope;Wizard;61;true;38;19;WI_112
+Esquire;Wizard;85;true;20;34;WI_113
+ExoticAlpha;Wizard;94;true;30;31;WI_114
+EyeShooter;Wizard;96;true;36;24;WI_115
+Fabulous;Wizard;66;true;46;31;WI_116
+Fast Draw;Wizard;71;true;43;41;WI_117
+FastLane;Wizard;69;true;34;39;WI_118
+Father Abbot;Wizard;50;true;41;13;WI_119
+FenderBoyXXX;Wizard;73;true;44;16;WI_120
+Fennel Dove;Wizard;83;true;32;48;WI_121
+Feral Mayhem;Wizard;77;true;12;30;WI_122
+Fiend Oblivion;Wizard;56;true;45;19;WI_123
+FifthHarmony;Wizard;60;true;36;39;WI_124
+Fire Feline;Wizard;98;true;34;11;WI_125
+Fire Fish;Wizard;93;true;18;46;WI_126
+FireByMisFire;Wizard;69;true;10;39;WI_127
+Fist Wizard;Wizard;62;true;16;20;WI_128
+Atilla;Wizard;78;true;19;11;WI_129
+Darko;Wizard;92;true;50;34;WI_130
+Terminator;Wizard;97;true;44;29;WI_131
+Conqueror;Wizard;83;true;9;31;WI_132
+Mad Max;Wizard;77;true;17;36;WI_133
+Siddhartha;Wizard;98;true;50;44;WI_134
+Suleiman;Wizard;69;true;10;12;WI_135
+Billy the Butcher;Wizard;80;true;34;38;WI_136
+Thor;Wizard;78;true;32;21;WI_137
+Napoleon;Wizard;87;true;36;30;WI_138
+Maximus;Wizard;67;true;40;47;WI_139
+Khan;Wizard;53;true;25;44;WI_140
+Geronimo;Wizard;80;true;23;34;WI_141
+Leon;Wizard;51;true;43;21;WI_142
+Leonidas;Wizard;79;true;44;23;WI_143
+Dutch;Wizard;66;true;31;31;WI_144
+Cyrus;Wizard;66;true;19;23;WI_145
+Hannibal;Wizard;94;true;4;40;WI_146
+Dux;Wizard;74;true;20;35;WI_147
+Mr. Blonde;Wizard;72;true;40;47;WI_148
+Agrippa;Wizard;63;true;1;28;WI_149
+Matrix;Wizard;65;true;42;19;WI_150
