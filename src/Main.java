@@ -17,13 +17,6 @@ public class Main {
 
         Wizard wizard2 = new Wizard("Charmander");
 
-//        warrior.setHp(5);
-//        newWarrior.setHp(5);
-//        wizard.setHp(5);
-//        wizard2.setHp(5);
-//        GameLogic.battle(warrior,newWarrior);
-
-        //GameLogic.battle(wizard, wizard2);
 
         try {
             GameLogic.printMenu();

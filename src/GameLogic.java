@@ -1,7 +1,5 @@
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
@@ -79,14 +77,25 @@ public class GameLogic {
         System.out.println("GET READY");
         System.out.println(player1.getName() + " VERSUS " + player2.getName());
         Thread.sleep(1000);
+        ThreeTwoOne sound1 = new ThreeTwoOne();
+        sound1.start();
         System.out.println("BATTLE STARTS IN");
         System.out.println("3");
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         System.out.println("2");
         Thread.sleep(1000);
         System.out.println("1");
         Thread.sleep(1000);
+
+
+
+
         //the loop starts
+
+            PunchSound sound3 = new PunchSound();
+            sound3.start();
+
+
         do{
             System.out.println();
             System.out.println( "Round number " + roundCount);
@@ -126,11 +135,16 @@ public class GameLogic {
             System.out.println("Remaining HP - ");
             System.out.println("        " + player1.getName() + "       " + player2.getName() + "          ");
             System.out.println("         " + player1.getHp() + "              " + player2.getHp() + "           ");
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } while (player1.isAlive() && player2.isAlive());
 
 
+
+
         if(!player1.isAlive()){
+            sound3.stop();
+            WinnerSound sound2 = new WinnerSound();
+            sound2.start();
             System.out.println();
             printSeparator(30);
             System.out.println( player1.getName() + " is dead.");
@@ -148,7 +162,11 @@ public class GameLogic {
                     "                                                                                 ");
             printSeparator(30);
             System.out.println();
+            Thread.sleep(3000);
         } else if(!player2.isAlive()){
+            sound3.stop();
+            WinnerSound sound2 = new WinnerSound();
+            sound2.start();
             System.out.println();
             printSeparator(30);
             System.out.println( player2.getName() + " is dead.");
@@ -166,6 +184,7 @@ public class GameLogic {
                     "                                                                                 ");
             printSeparator(30);
             System.out.println();
+            Thread.sleep(3000);
         }
 
         try {
