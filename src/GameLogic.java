@@ -75,6 +75,17 @@ public class GameLogic {
             clonPlayer2 = ((Wizard)player2).clone();
         }
         int roundCount = 1;
+        printSeparator(30);
+        System.out.println("GET READY");
+        System.out.println(player1.getName() + " VERSUS " + player2.getName());
+        Thread.sleep(1000);
+        System.out.println("BATTLE STARTS IN");
+        System.out.println("3");
+        Thread.sleep(1000);
+        System.out.println("2");
+        Thread.sleep(1000);
+        System.out.println("1");
+        Thread.sleep(1000);
         //the loop starts
         do{
             System.out.println();
@@ -112,7 +123,10 @@ public class GameLogic {
                 }
 
             }
-            Thread.sleep(100);
+            System.out.println("Remaining HP - ");
+            System.out.println("        " + player1.getName() + "       " + player2.getName() + "          ");
+            System.out.println("         " + player1.getHp() + "              " + player2.getHp() + "           ");
+            Thread.sleep(1000);
         } while (player1.isAlive() && player2.isAlive());
 
 
@@ -231,7 +245,7 @@ public class GameLogic {
             char1 = new Warrior(player1array[0], Integer.parseInt(player1array[2]), Integer.parseInt(player1array[5]),Integer.parseInt(player1array[4]));
 
         } else {
-           char1 = new Wizard(player1array[0], Integer.parseInt(player1array[2]), Integer.parseInt(player1array[5]),Integer.parseInt(player1array[4]));
+            char1 = new Wizard(player1array[0], Integer.parseInt(player1array[2]), Integer.parseInt(player1array[5]),Integer.parseInt(player1array[4]));
         }
 
 
@@ -243,17 +257,7 @@ public class GameLogic {
             char2 = new Wizard(player2array[0], Integer.parseInt(player2array[2]), Integer.parseInt(player2array[5]),Integer.parseInt(player2array[4]));
         }
 
-        printSeparator(30);
-        System.out.println("GET READY");
-        System.out.println(char1.getName() + " VERSUS " + char2.getName());
-        Thread.sleep(1000);
-        System.out.println("BATTLE STARTS IN");
-        System.out.println("3");
-        Thread.sleep(1000);
-        System.out.println("2");
-        Thread.sleep(1000);
-        System.out.println("1");
-        Thread.sleep(1000);
+
 
         battle(char1,char2);
 
@@ -264,7 +268,7 @@ public class GameLogic {
 //        System.out.println(listOfChars.get(0).getName());
 //        System.out.println(listOfChars.get(1).getName());
 
- //       return listOfChars;
+        //       return listOfChars;
     }
 
     public static void printSeparator(int n){

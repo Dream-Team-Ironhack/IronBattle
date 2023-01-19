@@ -34,7 +34,7 @@ public class Warrior extends Character implements Attacker{
 
     public void setStrength() {
 
-        this.strength = new Random().nextInt(1, 11) ;
+        this.strength = new Random().nextInt(1, 17) ;
     }
 
     @Override
@@ -60,18 +60,18 @@ public class Warrior extends Character implements Attacker{
         // basic logic for warrior attack
         if (randomAttack == 1 || this.stamina < 5) {
             //weakAttack
-           character.setHp(health-strength/2);
-           stamina++;
-            System.out.println( this.getName() +" strikes with a quick Weak Attack to "+ character.getName() + ",dealing " + (strength/2) +" points of damage, and his remaining HP are "+ character.getHp());        } else if (randomAttack == 2 && this.stamina>=5){
-                //heavyAttack();
-                character.setHp(health-strength);
-                stamina=-5;
-            System.out.println(this.getName() +" makes a desvastating Heavy Attack to " + character.getName() + ",dealing " + (strength) + " points of damage, and his remaining HP are " + character.getHp());            }
+            character.setHp(health-strength/2);
+            stamina++;
+            System.out.println( this.getName() +" strikes with a quick Weak Attack to "+ character.getName() + ", dealing " + (strength/2) +" points of damage, and his remaining HP are "+ character.getHp());        } else if (randomAttack == 2 && this.stamina>=5){
+            //heavyAttack();
+            character.setHp(health-strength);
+            stamina=-5;
+            System.out.println(this.getName() +" makes a desvastating Heavy Attack to " + character.getName() + ", dealing " + (strength) + " points of damage, and his remaining HP are " + character.getHp());            }
 
         if(character.getHp() <= 0){
             character.setAlive(false);
         }
-        }
+    }
 
     @Override
     public Warrior clone() {
